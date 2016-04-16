@@ -1,0 +1,224 @@
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1000; }
+  header .container {
+    height: 100px; }
+
+.logo {
+  float: left;
+  margin-top: 35px;
+  margin-left: 30px; }
+  .logo:hover {
+    opacity: 0.8; }
+
+.main-nav {
+  float: right;
+  margin-right: 30px;
+  margin-top: 30px; }
+  .main-nav li {
+    display: inline-block;
+    margin: 5px; }
+  .main-nav a {
+    font: 500 14px/28px 'Roboto';
+    color: #bbb;
+    text-transform: uppercase;
+    text-decoration: none; }
+    .main-nav a:hover {
+      color: white; }
+
+@media (max-width: 810px) {
+  .button_container {
+    position: fixed;
+    top: 37px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity .25s ease; }
+    .button_container:hover {
+      opacity: .7; }
+    .button_container.active {
+      opacity: .5; }
+      .button_container.active .top {
+        transform: translateY(11px) translateX(0) rotate(45deg);
+        background: black; }
+      .button_container.active .middle {
+        opacity: 0;
+        background: black; }
+      .button_container.active .bottom {
+        transform: translateY(-11px) translateX(0) rotate(-45deg);
+        background: black; }
+    .button_container span {
+      background: #f7cc4b;
+      border: none;
+      height: 5px;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all .35s ease;
+      cursor: pointer; }
+      .button_container span:nth-of-type(2) {
+        top: 11px; }
+      .button_container span:nth-of-type(3) {
+        top: 22px; }
+
+  nav {
+    position: fixed;
+    background: #f7cc4b;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden; }
+    nav.open {
+      opacity: .9;
+      visibility: visible;
+      height: 100%; }
+      nav.open li {
+        animation: fadeInRight .5s ease forwards;
+        animation-delay: .35s; }
+        nav.open li:nth-of-type(2) {
+          animation-delay: .4s; }
+        nav.open li:nth-of-type(3) {
+          animation-delay: .5s; }
+        nav.open li:nth-of-type(4) {
+          animation-delay: .6s; }
+        nav.open li:nth-of-type(5) {
+          animation-delay: .7s; }
+        nav.open li:nth-of-type(6) {
+          animation-delay: .8s; }
+        nav.open li:nth-of-type(7) {
+          animation-delay: .9s; }
+
+  .main-nav {
+    float: none;
+    margin-right: 0;
+    margin-top: 90px; }
+    .main-nav li {
+      display: block;
+      opacity: 0; }
+    .main-nav a {
+      display: block;
+      margin: 35px;
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.5);
+      transition: .4s; }
+      .main-nav a:hover {
+        font-weight: 600;
+        color: black; }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%; }
+    100% {
+      opacity: 1;
+      left: 0; } } }
+.hero {
+  position: relative;
+  min-height: 900px;
+  padding: 0 5px 5px 5px;
+  background: url("../images/bg.jpg") fixed center/cover no-repeat, linear-gradient(to left, #bb4343 0%, #efab4b 100%);
+  color: #f7f7f7; }
+  .hero .hero-body {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
+    .hero .hero-body .hero-title {
+      font: 400 48px/60px "BIG JOHN", sans-serif;
+      text-transform: uppercase; }
+      .hero .hero-body .hero-title:after {
+        width: 86px;
+        height: 2px;
+        content: " ";
+        display: block;
+        background: #fff;
+        margin: 55px auto 45px; }
+    .hero .hero-body p {
+      font: 400 22px/30px 'Amble Regular';
+      color: #fffefe;
+      margin: 20px 0 50px; }
+  .hero .arrow-down {
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+    .hero .arrow-down:hover {
+      transform: scale(1.3); }
+
+@media (min-width: 769px) {
+  .hero {
+    min-height: 900px; }
+    .hero .hero-body {
+      top: 70%; }
+      .hero .hero-body .hero-title {
+        font: 400 48px/60px "BIG JOHN", sans-serif; }
+      .hero .hero-body p {
+        font: 400 22px/30px 'Amble Regular';
+        color: #fffefe;
+        margin: 20px 0 100px; } }
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  min-width: 335px;
+  position: relative;
+  line-height: 1.42857;
+  -webkit-font-smoothing: antialised; }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: red; }
+
+body input:required:valid,
+body textarea:required:valid {
+  color: green; }
+
+.hidden {
+  display: none; }
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+/*------------------------------------MIXIN------------------------------*/
+/*------------------------------------COLOR------------------------------*/
+a:hover, a:focus, input:hover, li:active {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+/*------------------------------------HEADER------------------------------*/
+/*------------------------------------Preloader----------------------------*/
+.loader {
+  background: none repeat scroll 0 0 white;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+  .loader .loader_inner {
+    background-image: url("../images/preloader.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute; }
