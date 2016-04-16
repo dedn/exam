@@ -810,8 +810,8 @@ body #Clients .bx-wrapper .bx-viewport {
 .btn-container{
   float: right;
 }
-.blog-btn{
-
+.blog-btn, .more-link{
+  
   @include main-btn;
   background: $white;
   border: 2px solid $color_accent;

@@ -664,7 +664,7 @@ body #Clients .bx-wrapper .bx-viewport {
 .btn-container {
   float: right; }
 
-.blog-btn {
+.blog-btn, .more-link {
   display: block;
   float: left;
   width: 151px;
@@ -679,10 +679,10 @@ body #Clients .bx-wrapper .bx-viewport {
   border: 2px solid #ffaf36;
   color: #ffaf36;
   cursor: pointer; }
-  .blog-btn:hover {
+  .blog-btn:hover, .more-link:hover {
     background: #fff;
     box-shadow: 3.5px 3.6px 0 rgba(0, 0, 0, 0.22); }
-  .blog-btn:active {
+  .blog-btn:active, .more-link:active {
     -webkit-transform: scale(0.9) rotate(-3deg);
     -moz-transform: scale(0.9) rotate(-3deg);
     -ms-transform: scale(0.9) rotate(-3deg);
